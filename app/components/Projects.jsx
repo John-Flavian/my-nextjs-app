@@ -1,14 +1,8 @@
 import Link from "next/link";
 
 
-async function fetchProjects() {
-  const response = await fetch('http://localhost:3000/api/projects');
-  const projects = await response.json();
-  return projects;
-}
-
-const Projects = async () => {
-  const projects = await fetchProjects();
+const Projects = ({ projects }) => {
+  
   return (
     <div className='courses'>
       {
